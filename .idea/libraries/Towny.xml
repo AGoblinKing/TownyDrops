@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Towny">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/AppData/Roaming/.craftbukkit/plugins/Towny.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
