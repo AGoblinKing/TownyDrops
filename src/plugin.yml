@@ -1,0 +1,27 @@
+name: WorldOfGods
+main: com.wra.bukkit.wog.WorldOfGods
+version: 1
+
+commands:
+    droprate:
+        description: You can adjust the drop rate of materials in the world.
+        permission: wog.droprate
+        usage: |
+            /<command> [TYPE] [PERCENTAGE]
+    dropamount:
+        description: You can adjust the drop rate of materials in the world.
+        permission: wog.droprate
+        usage: |
+            /<command> [TYPE] [PERCENTAGE]
+permissions:
+    wog.*:
+        description: Full access to the World of Gods commands
+        children:
+            wog.droprate: true
+            wog.dropamount: true
+    wog.droprate:
+        description: Allows users to adjust the drop rate of materials in the world.
+        default: false
+    wog.dropamount:
+        description: Allows users to adjust the drop rate of materials in the world.
+        default: false
