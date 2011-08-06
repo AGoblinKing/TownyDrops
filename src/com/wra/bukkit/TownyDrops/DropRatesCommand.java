@@ -1,10 +1,9 @@
-package com.wra.bukkit.WorldOfGods;
+package com.wra.bukkit.TownyDrops;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.util.config.ConfigurationNode;
 
 import java.util.Map;
@@ -16,27 +15,23 @@ import java.util.Map;
  * Time: 2:06 AM
  * To change this template use File | Settings | File Templates.
  */
-public class SpeedBlockCommand implements CommandExecutor {
-    private final WorldOfGods plugin;
+public class DropRatesCommand implements CommandExecutor {
+    private final TownyDrops plugin;
 
-    public SpeedBlockCommand(WorldOfGods plugin) {
+    public DropRatesCommand(TownyDrops plugin) {
         this.plugin = plugin;
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] split) {
-        if (!(sender instanceof Player)) {
-            return false;
-        }
-        Player player = (Player) sender;
-        if(split.length == 0) {
+        if(split.length == 0 && sender.hasPermission("wog.droprates")) {
             ConfigurationNode drops = this.plugin.config.getNode("droprate");
             if(drops != null) {
                 Map<String, Object> droplist = drops.getAll();
                 for(Map.Entry<String, Object> e: droplist.entrySet()) {
-                      player.sendMessage(ChatColor.RED+e.getKey() + ": " + e.getValue().toString() + "%");
+                      sender.sendMessage(ChatColor.RED+e.getKey() + ": " + e.getValue().toString() + "%");
                 }
             } else {
-                player.sendMessage("No custom drop rates defined.");
+                sender.sendMessage("No custom drop rates defined.");
             }
             return true;
 

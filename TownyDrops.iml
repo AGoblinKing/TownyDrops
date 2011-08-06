@@ -8,6 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Bukkit" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Towny" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Permissions" level="project" />
   </component>
 </module>
 
