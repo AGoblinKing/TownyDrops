@@ -1,9 +1,0 @@
-droprate:
-    default: 0
-    DIRT: 100
-    GRASS: 100
-    WOOD: 50
-
-dropamount:
-    pykedout:
-        DIRT: 2
