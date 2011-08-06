@@ -27,7 +27,7 @@ public class TownyDrops extends JavaPlugin {
     }
 
     public void onEnable() {
-        log.info("World of Gods Plugin enabled");
+        log.info("[TownyDrops] Enabled");
         PluginManager pm = this.getServer().getPluginManager();
         towny = (Towny)pm.getPlugin("Towny");
 
