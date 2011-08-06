@@ -6,6 +6,7 @@ This requires Towny to use but enables use to set drop rates/amount/bonus of blo
 Mining towns vs Lumber Towns vs your Imagination.
 
 commands:
+
     droprate:
         description: You can adjust the drop rate of materials in the world.
         permission: wog.droprate
@@ -33,6 +34,7 @@ commands:
         usage: |
             /<command> [PLAYER]
 permissions:
+
     wog.*:
         description: Full access to the World of Gods commands
         children:
